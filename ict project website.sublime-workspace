@@ -1,0 +1,1006 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"background",
+				"background-color"
+			],
+			[
+				"marg",
+				"margin-bottom"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"list-styl",
+				"list-style-image"
+			],
+			[
+				"bord",
+				"border_grey"
+			],
+			[
+				"text",
+				"text-align"
+			],
+			[
+				"interim",
+				"interim_span"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "app/app.js",
+			"settings":
+			{
+				"buffer_size": 287,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/index.html",
+			"settings":
+			{
+				"buffer_size": 2432,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "<<<<<<< HEAD\n# angular-seed — the seed for AngularJS apps\n\nThis project is an application skeleton for a typical [AngularJS](http://angularjs.org/) web app.\nYou can use it to quickly bootstrap your angular webapp projects and dev environment for these\nprojects.\n\nThe seed contains a sample AngularJS application and is preconfigured to install the Angular\nframework and a bunch of development and testing tools for instant web development gratification.\n\nThe seed app doesn't do much, just shows how to wire two controllers and views together.\n\n\n## Getting Started\n\nTo get you started you can simply clone the angular-seed repository and install the dependencies:\n\n### Prerequisites\n\nYou need git to clone the angular-seed repository. You can get git from\n[http://git-scm.com/](http://git-scm.com/).\n\nWe also use a number of node.js tools to initialize and test angular-seed. You must have node.js and\nits package manager (npm) installed.  You can get them from [http://nodejs.org/](http://nodejs.org/).\n\n### Clone angular-seed\n\nClone the angular-seed repository using [git][git]:\n\n```\ngit clone https://github.com/angular/angular-seed.git\ncd angular-seed\n```\n\n### Install Dependencies\n\nWe have two kinds of dependencies in this project: tools and angular framework code.  The tools help\nus manage and test the application.\n\n* We get the tools we depend upon via `npm`, the [node package manager][npm].\n* We get the angular code via `bower`, a [client-side code package manager][bower].\n\nWe have preconfigured `npm` to automatically run `bower` so we can simply do:\n\n```\nnpm install\n```\n\nBehind the scenes this will also call `bower install`.  You should find that you have two new\nfolders in your project.\n\n* `node_modules` - contains the npm packages for the tools we need\n* `app/bower_components` - contains the angular framework files\n\n*Note that the `bower_components` folder would normally be installed in the root folder but\nangular-seed changes this location through the `.bowerrc` file.  Putting it in the app folder makes\nit easier to serve the files by a webserver.*\n\n### Run the Application\n\nWe have preconfigured the project with a simple development web server.  The simplest way to start\nthis server is:\n\n```\nnpm start\n```\n\nNow browse to the app at `http://localhost:8000/app/index.html`.\n\n\n\n## Directory Layout\n\n```\napp/                    --> all of the source files for the application\n  app.css               --> default stylesheet\n  components/           --> all app specific modules\n    version/              --> version related components\n      version.js                 --> version module declaration and basic \"version\" value service\n      version_test.js            --> \"version\" value service tests\n      version-directive.js       --> custom directive that returns the current app version\n      version-directive_test.js  --> version directive tests\n      interpolate-filter.js      --> custom interpolation filter\n      interpolate-filter_test.js --> interpolate filter tests\n  view1/                --> the view1 view template and logic\n    view1.html            --> the partial template\n    view1.js              --> the controller logic\n    view1_test.js         --> tests of the controller\n  view2/                --> the view2 view template and logic\n    view2.html            --> the partial template\n    view2.js              --> the controller logic\n    view2_test.js         --> tests of the controller\n  app.js                --> main application module\n  index.html            --> app layout file (the main html template file of the app)\n  index-async.html      --> just like index.html, but loads js files asynchronously\nkarma.conf.js         --> config file for running unit tests with Karma\ne2e-tests/            --> end-to-end tests\n  protractor-conf.js    --> Protractor config file\n  scenarios.js          --> end-to-end scenarios to be run by Protractor\n```\n\n## Testing\n\nThere are two kinds of tests in the angular-seed application: Unit tests and End to End tests.\n\n### Running Unit Tests\n\nThe angular-seed app comes preconfigured with unit tests. These are written in\n[Jasmine][jasmine], which we run with the [Karma Test Runner][karma]. We provide a Karma\nconfiguration file to run them.\n\n* the configuration is found at `karma.conf.js`\n* the unit tests are found in next to the code they are testing and are named as `..._test.js`.\n\nThe easiest way to run the unit tests is to use the supplied npm script:\n\n```\nnpm test\n```\n\nThis script will start the Karma test runner to execute the unit tests. Moreover, Karma will sit and\nwatch the source and test files for changes and then re-run the tests whenever any of them change.\nThis is the recommended strategy; if your unit tests are being run every time you save a file then\nyou receive instant feedback on any changes that break the expected code functionality.\n\nYou can also ask Karma to do a single run of the tests and then exit.  This is useful if you want to\ncheck that a particular version of the code is operating as expected.  The project contains a\npredefined script to do this:\n\n```\nnpm run test-single-run\n```\n\n\n### End to end testing\n\nThe angular-seed app comes with end-to-end tests, again written in [Jasmine][jasmine]. These tests\nare run with the [Protractor][protractor] End-to-End test runner.  It uses native events and has\nspecial features for Angular applications.\n\n* the configuration is found at `e2e-tests/protractor-conf.js`\n* the end-to-end tests are found in `e2e-tests/scenarios.js`\n\nProtractor simulates interaction with our web app and verifies that the application responds\ncorrectly. Therefore, our web server needs to be serving up the application, so that Protractor\ncan interact with it.\n\n```\nnpm start\n```\n\nIn addition, since Protractor is built upon WebDriver we need to install this.  The angular-seed\nproject comes with a predefined script to do this:\n\n```\nnpm run update-webdriver\n```\n\nThis will download and install the latest version of the stand-alone WebDriver tool.\n\nOnce you have ensured that the development web server hosting our application is up and running\nand WebDriver is updated, you can run the end-to-end tests using the supplied npm script:\n\n```\nnpm run protractor\n```\n\nThis script will execute the end-to-end tests against the application being hosted on the\ndevelopment server.\n\n\n## Updating Angular\n\nPreviously we recommended that you merge in changes to angular-seed into your own fork of the project.\nNow that the angular framework library code and tools are acquired through package managers (npm and\nbower) you can use these tools instead to update the dependencies.\n\nYou can update the tool dependencies by running:\n\n```\nnpm update\n```\n\nThis will find the latest versions that match the version ranges specified in the `package.json` file.\n\nYou can update the Angular dependencies by running:\n\n```\nbower update\n```\n\nThis will find the latest versions that match the version ranges specified in the `bower.json` file.\n\n\n## Loading Angular Asynchronously\n\nThe angular-seed project supports loading the framework and application scripts asynchronously.  The\nspecial `index-async.html` is designed to support this style of loading.  For it to work you must\ninject a piece of Angular JavaScript into the HTML page.  The project has a predefined script to help\ndo this.\n\n```\nnpm run update-index-async\n```\n\nThis will copy the contents of the `angular-loader.js` library file into the `index-async.html` page.\nYou can run this every time you update the version of Angular that you are using.\n\n\n## Serving the Application Files\n\nWhile angular is client-side-only technology and it's possible to create angular webapps that\ndon't require a backend server at all, we recommend serving the project files using a local\nwebserver during development to avoid issues with security restrictions (sandbox) in browsers. The\nsandbox implementation varies between browsers, but quite often prevents things like cookies, xhr,\netc to function properly when an html page is opened via `file://` scheme instead of `http://`.\n\n\n### Running the App during Development\n\nThe angular-seed project comes preconfigured with a local development webserver.  It is a node.js\ntool called [http-server][http-server].  You can start this webserver with `npm start` but you may choose to\ninstall the tool globally:\n\n```\nsudo npm install -g http-server\n```\n\nThen you can start your own development web server to serve static files from a folder by\nrunning:\n\n```\nhttp-server -a localhost -p 8000\n```\n\nAlternatively, you can choose to configure your own webserver, such as apache or nginx. Just\nconfigure your server to serve the files under the `app/` directory.\n\n\n### Running the App in Production\n\nThis really depends on how complex your app is and the overall infrastructure of your system, but\nthe general rule is that all you need in production are all the files under the `app/` directory.\nEverything else should be omitted.\n\nAngular apps are really just a bunch of static html, css and js files that just need to be hosted\nsomewhere they can be accessed by browsers.\n\nIf your Angular app is talking to the backend server via xhr or other means, you need to figure\nout what is the best way to host the static files to comply with the same origin policy if\napplicable. Usually this is done by hosting the files by the backend server or through\nreverse-proxying the backend server(s) and webserver(s).\n\n\n## Continuous Integration\n\n### Travis CI\n\n[Travis CI][travis] is a continuous integration service, which can monitor GitHub for new commits\nto your repository and execute scripts such as building the app or running tests. The angular-seed\nproject contains a Travis configuration file, `.travis.yml`, which will cause Travis to run your\ntests when you push to GitHub.\n\nYou will need to enable the integration between Travis and GitHub. See the Travis website for more\ninstruction on how to do this.\n\n### CloudBees\n\nCloudBees have provided a CI/deployment setup:\n\n<a href=\"https://grandcentral.cloudbees.com/?CB_clickstart=https://raw.github.com/CloudBees-community/angular-js-clickstart/master/clickstart.json\">\n<img src=\"https://d3ko533tu1ozfq.cloudfront.net/clickstart/deployInstantly.png\"/></a>\n\nIf you run this, you will get a cloned version of this repo to start working on in a private git repo,\nalong with a CI service (in Jenkins) hosted that will run unit and end to end tests in both Firefox and Chrome.\n\n\n## Contact\n\nFor more information on AngularJS please check out http://angularjs.org/\n\n[git]: http://git-scm.com/\n[bower]: http://bower.io\n[npm]: https://www.npmjs.org/\n[node]: http://nodejs.org\n[protractor]: https://github.com/angular/protractor\n[jasmine]: http://jasmine.github.io\n[karma]: http://karma-runner.github.io\n[travis]: https://travis-ci.org/\n[http-server]: https://github.com/nodeapps/http-server\n=======\nICTProjectWebsite\n=================\n\nWebsite of our ICT project\n>>>>>>> f1ff0118dc532e9beb697131b03311a74bf16482\n",
+			"file": "README.md",
+			"file_size": -1,
+			"file_write_time": -1,
+			"settings":
+			{
+				"buffer_size": 10979,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "<<<<<<< HEAD\n# angular-seed — the seed for AngularJS apps\n\nThis project is an application skeleton for a typical [AngularJS](http://angularjs.org/) web app.\nYou can use it to quickly bootstrap your angular webapp projects and dev environment for these\nprojects.\n\nThe seed contains a sample AngularJS application and is preconfigured to install the Angular\nframework and a bunch of development and testing tools for instant web development gratification.\n\nThe seed app doesn't do much, just shows how to wire two controllers and views together.\n\n\n## Getting Started\n\nTo get you started you can simply clone the angular-seed repository and install the dependencies:\n\n### Prerequisites\n\nYou need git to clone the angular-seed repository. You can get git from\n[http://git-scm.com/](http://git-scm.com/).\n\nWe also use a number of node.js tools to initialize and test angular-seed. You must have node.js and\nits package manager (npm) installed.  You can get them from [http://nodejs.org/](http://nodejs.org/).\n\n### Clone angular-seed\n\nClone the angular-seed repository using [git][git]:\n\n```\ngit clone https://github.com/angular/angular-seed.git\ncd angular-seed\n```\n\n### Install Dependencies\n\nWe have two kinds of dependencies in this project: tools and angular framework code.  The tools help\nus manage and test the application.\n\n* We get the tools we depend upon via `npm`, the [node package manager][npm].\n* We get the angular code via `bower`, a [client-side code package manager][bower].\n\nWe have preconfigured `npm` to automatically run `bower` so we can simply do:\n\n```\nnpm install\n```\n\nBehind the scenes this will also call `bower install`.  You should find that you have two new\nfolders in your project.\n\n* `node_modules` - contains the npm packages for the tools we need\n* `app/bower_components` - contains the angular framework files\n\n*Note that the `bower_components` folder would normally be installed in the root folder but\nangular-seed changes this location through the `.bowerrc` file.  Putting it in the app folder makes\nit easier to serve the files by a webserver.*\n\n### Run the Application\n\nWe have preconfigured the project with a simple development web server.  The simplest way to start\nthis server is:\n\n```\nnpm start\n```\n\nNow browse to the app at `http://localhost:8000/app/index.html`.\n\n\n\n## Directory Layout\n\n```\napp/                    --> all of the source files for the application\n  app.css               --> default stylesheet\n  components/           --> all app specific modules\n    version/              --> version related components\n      version.js                 --> version module declaration and basic \"version\" value service\n      version_test.js            --> \"version\" value service tests\n      version-directive.js       --> custom directive that returns the current app version\n      version-directive_test.js  --> version directive tests\n      interpolate-filter.js      --> custom interpolation filter\n      interpolate-filter_test.js --> interpolate filter tests\n  view1/                --> the view1 view template and logic\n    view1.html            --> the partial template\n    view1.js              --> the controller logic\n    view1_test.js         --> tests of the controller\n  view2/                --> the view2 view template and logic\n    view2.html            --> the partial template\n    view2.js              --> the controller logic\n    view2_test.js         --> tests of the controller\n  app.js                --> main application module\n  index.html            --> app layout file (the main html template file of the app)\n  index-async.html      --> just like index.html, but loads js files asynchronously\nkarma.conf.js         --> config file for running unit tests with Karma\ne2e-tests/            --> end-to-end tests\n  protractor-conf.js    --> Protractor config file\n  scenarios.js          --> end-to-end scenarios to be run by Protractor\n```\n\n## Testing\n\nThere are two kinds of tests in the angular-seed application: Unit tests and End to End tests.\n\n### Running Unit Tests\n\nThe angular-seed app comes preconfigured with unit tests. These are written in\n[Jasmine][jasmine], which we run with the [Karma Test Runner][karma]. We provide a Karma\nconfiguration file to run them.\n\n* the configuration is found at `karma.conf.js`\n* the unit tests are found in next to the code they are testing and are named as `..._test.js`.\n\nThe easiest way to run the unit tests is to use the supplied npm script:\n\n```\nnpm test\n```\n\nThis script will start the Karma test runner to execute the unit tests. Moreover, Karma will sit and\nwatch the source and test files for changes and then re-run the tests whenever any of them change.\nThis is the recommended strategy; if your unit tests are being run every time you save a file then\nyou receive instant feedback on any changes that break the expected code functionality.\n\nYou can also ask Karma to do a single run of the tests and then exit.  This is useful if you want to\ncheck that a particular version of the code is operating as expected.  The project contains a\npredefined script to do this:\n\n```\nnpm run test-single-run\n```\n\n\n### End to end testing\n\nThe angular-seed app comes with end-to-end tests, again written in [Jasmine][jasmine]. These tests\nare run with the [Protractor][protractor] End-to-End test runner.  It uses native events and has\nspecial features for Angular applications.\n\n* the configuration is found at `e2e-tests/protractor-conf.js`\n* the end-to-end tests are found in `e2e-tests/scenarios.js`\n\nProtractor simulates interaction with our web app and verifies that the application responds\ncorrectly. Therefore, our web server needs to be serving up the application, so that Protractor\ncan interact with it.\n\n```\nnpm start\n```\n\nIn addition, since Protractor is built upon WebDriver we need to install this.  The angular-seed\nproject comes with a predefined script to do this:\n\n```\nnpm run update-webdriver\n```\n\nThis will download and install the latest version of the stand-alone WebDriver tool.\n\nOnce you have ensured that the development web server hosting our application is up and running\nand WebDriver is updated, you can run the end-to-end tests using the supplied npm script:\n\n```\nnpm run protractor\n```\n\nThis script will execute the end-to-end tests against the application being hosted on the\ndevelopment server.\n\n\n## Updating Angular\n\nPreviously we recommended that you merge in changes to angular-seed into your own fork of the project.\nNow that the angular framework library code and tools are acquired through package managers (npm and\nbower) you can use these tools instead to update the dependencies.\n\nYou can update the tool dependencies by running:\n\n```\nnpm update\n```\n\nThis will find the latest versions that match the version ranges specified in the `package.json` file.\n\nYou can update the Angular dependencies by running:\n\n```\nbower update\n```\n\nThis will find the latest versions that match the version ranges specified in the `bower.json` file.\n\n\n## Loading Angular Asynchronously\n\nThe angular-seed project supports loading the framework and application scripts asynchronously.  The\nspecial `index-async.html` is designed to support this style of loading.  For it to work you must\ninject a piece of Angular JavaScript into the HTML page.  The project has a predefined script to help\ndo this.\n\n```\nnpm run update-index-async\n```\n\nThis will copy the contents of the `angular-loader.js` library file into the `index-async.html` page.\nYou can run this every time you update the version of Angular that you are using.\n\n\n## Serving the Application Files\n\nWhile angular is client-side-only technology and it's possible to create angular webapps that\ndon't require a backend server at all, we recommend serving the project files using a local\nwebserver during development to avoid issues with security restrictions (sandbox) in browsers. The\nsandbox implementation varies between browsers, but quite often prevents things like cookies, xhr,\netc to function properly when an html page is opened via `file://` scheme instead of `http://`.\n\n\n### Running the App during Development\n\nThe angular-seed project comes preconfigured with a local development webserver.  It is a node.js\ntool called [http-server][http-server].  You can start this webserver with `npm start` but you may choose to\ninstall the tool globally:\n\n```\nsudo npm install -g http-server\n```\n\nThen you can start your own development web server to serve static files from a folder by\nrunning:\n\n```\nhttp-server -a localhost -p 8000\n```\n\nAlternatively, you can choose to configure your own webserver, such as apache or nginx. Just\nconfigure your server to serve the files under the `app/` directory.\n\n\n### Running the App in Production\n\nThis really depends on how complex your app is and the overall infrastructure of your system, but\nthe general rule is that all you need in production are all the files under the `app/` directory.\nEverything else should be omitted.\n\nAngular apps are really just a bunch of static html, css and js files that just need to be hosted\nsomewhere they can be accessed by browsers.\n\nIf your Angular app is talking to the backend server via xhr or other means, you need to figure\nout what is the best way to host the static files to comply with the same origin policy if\napplicable. Usually this is done by hosting the files by the backend server or through\nreverse-proxying the backend server(s) and webserver(s).\n\n\n## Continuous Integration\n\n### Travis CI\n\n[Travis CI][travis] is a continuous integration service, which can monitor GitHub for new commits\nto your repository and execute scripts such as building the app or running tests. The angular-seed\nproject contains a Travis configuration file, `.travis.yml`, which will cause Travis to run your\ntests when you push to GitHub.\n\nYou will need to enable the integration between Travis and GitHub. See the Travis website for more\ninstruction on how to do this.\n\n### CloudBees\n\nCloudBees have provided a CI/deployment setup:\n\n<a href=\"https://grandcentral.cloudbees.com/?CB_clickstart=https://raw.github.com/CloudBees-community/angular-js-clickstart/master/clickstart.json\">\n<img src=\"https://d3ko533tu1ozfq.cloudfront.net/clickstart/deployInstantly.png\"/></a>\n\nIf you run this, you will get a cloned version of this repo to start working on in a private git repo,\nalong with a CI service (in Jenkins) hosted that will run unit and end to end tests in both Firefox and Chrome.\n\n\n## Contact\n\nFor more information on AngularJS please check out http://angularjs.org/\n\n[git]: http://git-scm.com/\n[bower]: http://bower.io\n[npm]: https://www.npmjs.org/\n[node]: http://nodejs.org\n[protractor]: https://github.com/angular/protractor\n[jasmine]: http://jasmine.github.io\n[karma]: http://karma-runner.github.io\n[travis]: https://travis-ci.org/\n[http-server]: https://github.com/nodeapps/http-server\n=======\nICTProjectWebsite\n=================\n\nWebsite of our ICT project\n>>>>>>> f1ff0118dc532e9beb697131b03311a74bf16482\n",
+			"settings":
+			{
+				"buffer_size": 10979,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/view2/view2.js",
+			"settings":
+			{
+				"buffer_size": 267,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 109.0,
+		"selected_items":
+		[
+			[
+				"snippe head",
+				"Snippet: HTML-heading-bootstrap"
+			],
+			[
+				"pas",
+				"Text Pastry: From 1 To X"
+			],
+			[
+				"past",
+				"Text Pastry: From 0 To X"
+			],
+			[
+				"pastry",
+				"Text Pastry: From 0 To X"
+			],
+			[
+				"lore",
+				"LoremIpsum: (30) lots"
+			],
+			[
+				"enable",
+				"Package Control: Enable Package"
+			],
+			[
+				"packaged",
+				"Package Control: Disable Package"
+			],
+			[
+				"packages",
+				"Preferences: Browse Packages"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 583.0
+	},
+	"console":
+	{
+		"height": 157.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/arno/Documents/dev/ict website/app"
+	],
+	"file_history":
+	[
+		"/home/arno/Documents/dev/ict website/README.md",
+		"/home/arno/Documents/dev/ict website/app/config.rb",
+		"/home/arno/Documents/dev/ict website/app/view1/view1_test.js",
+		"/home/arno/Documents/dev/ict website/app/view2/view2_test.js",
+		"/home/arno/Documents/dev/ict website/package.json",
+		"/home/arno/Documents/dev/ictprojectwebsite/scripts/app.js",
+		"/home/arno/Documents/dev/ict website/app/app.js",
+		"/home/arno/Documents/dev/ictprojectwebsite/config.rb",
+		"/home/arno/Documents/dev/ictprojectwebsite/scripts/angular.min.js",
+		"/home/arno/Documents/dev/vagrant-lucid32/test file.txt",
+		"/home/arno/Documents/playground/angcrud/client/src/app/admin/projects/admin-projects.js",
+		"/home/arno/Documents/playground/angcrud/client/src/app/app.js",
+		"/home/arno/Documents/playground/angcrud/server/config.js",
+		"/home/arno/Documents/playground/angcrud/client/src/app/projectsinfo/projectsinfo.js",
+		"/home/arno/Documents/dev/translateit/app/views/inbox.html",
+		"/home/arno/Documents/dev/translateit/app/views/klant/single.html",
+		"/home/arno/Documents/dev/translateit/app/scripts/controllers/email.js",
+		"/home/arno/Documents/dev/translateit/app/styles/main.scss",
+		"/home/arno/Desktop/bash",
+		"/home/arno/Documents/dev/translateit/app/styles/_email.scss",
+		"/home/arno/Desktop/email",
+		"/home/arno/Documents/dev/translateit/app/styles/_theme.body.scss",
+		"/home/arno/Documents/dev/translateit/app/scripts/app.js",
+		"/home/arno/Documents/dev/translateit/app/styles/_theme.sidebar.scss",
+		"/home/arno/Documents/dev/translateit/app/styles/_media-queries.scss",
+		"/home/arno/Documents/dev/translateit/app/styles/_theme.topnav.scss",
+		"/home/arno/Documents/dev/translateit/app/views/temp.old",
+		"/home/arno/.local/share/applications/mimeapps.list",
+		"/home/arno/Documents/dev/translateit/package.json",
+		"/home/arno/Documents/dev/translateit/node_modules/grunt-autoprefixer/node_modules/autoprefixer/node_modules/caniuse-db/features-json/png-alpha.json",
+		"/home/arno/Documents/dev/translateit/app/views/boxes.html",
+		"/home/arno/Documents/dev/translateit/app/views/email.html",
+		"/home/arno/Documents/dev/translateit/app/scripts/controllers/main.js",
+		"/home/arno/Documents/dev/translateit/app/views/main.html",
+		"/home/arno/Documents/dev/translateit/bower.json",
+		"/home/arno/Documents/dev/translateit/app/views/common/header.html",
+		"/home/arno/Documents/dev/translateit/app/views/inbox/email.html",
+		"/home/arno/Documents/dev/translateit/app/styles/theme.scss",
+		"/home/arno/Documents/dev/translateit/.sass-cache/d56eb44357a41bd1988416f6b29fd9b4ae1c8b1f/main.scssc",
+		"/home/arno/Documents/dev/translateit/node_modules/grunt-contrib-imagemin/node_modules/chalk/node_modules/.bin/supports-color",
+		"/home/arno/Documents/dev/translateit/node_modules/grunt-svgmin/node_modules/svgo/.svgo.yml",
+		"/home/arno/Documents/dev/translateit/.bowerrc",
+		"/vm/OSX VMWARE/unlock-all-v130/linux/install.sh",
+		"/home/arno/Documents/dev/translateit/app/views/inbox.inbox.html",
+		"/home/arno/Documents/dev/translateit/app/views/common/sidebar.html",
+		"/home/arno/Documents/dev/translateit/app/views/about.html",
+		"/home/arno/Documents/dev/translateit/app/views/inbox.email.html",
+		"/home/arno/Documents/dev/translateit/node_modules/grunt-google-cdn/node_modules/bower/test/packages-svn.js",
+		"/home/arno/Documents/dev/translateit/app/index.html",
+		"/home/arno/Documents/dev/translateit/node_modules/grunt-contrib-uglify/node_modules/uglify-js/lib/mozilla-ast.js",
+		"/home/arno/Documents/dev/translateit/sb-admin-2/morris.html",
+		"/home/arno/Documents/dev/translateit/sb-admin-2/index.html",
+		"/home/arno/Documents/dev/translateit/app/styles/plugins/morris.css",
+		"/home/arno/Documents/dev/translateit/npm-debug.log",
+		"/home/arno/Documents/sublime-projects/Angular.sublime-project",
+		"/C/Windows/System32/drivers/etc/hosts",
+		"/C/xampp/apache/conf/extra/httpd-vhosts.conf",
+		"/D/Users/arno/Documents/dev/gemeente/sites/all/themes/bootstrap_gemeente/template.php",
+		"/d/Users/arno/Documents/sublime-projects/gemeente.sublime-project",
+		"/D/Users/arno/Documents/dev/gemeente/sites/all/themes/bootstrap_gemeente/bootstrap_gemeente.info",
+		"/d/Users/arno/Documents/dev/kriebeltuin/sites/all/themes/kriebeltuin_subtheme/sass/style.scss",
+		"/d/Users/arno/Documents/dev/kriebeltuin/sites/all/themes/kriebeltuin_subtheme/templates/nodes/node--8.tpl.php",
+		"/d/Users/arno/Documents/dev/kriebeltuin/sites/all/themes/kriebeltuin_subtheme/templates/nodes/node--begeleider.tpl.php",
+		"/d/Users/arno/Documents/dev/kriebeltuin/sites/all/themes/kriebeltuin_subtheme/templates/nodes/node--feature-column.tpl.php",
+		"/d/Users/arno/Documents/dev/kriebeltuin/sites/all/themes/kriebeltuin_subtheme/templates/nodes/node--html-block.tpl.php",
+		"/d/Users/arno/Documents/dev/kriebeltuin/sites/all/themes/kriebeltuin_subtheme/templates/nodes/node--main-feature.tpl.php",
+		"/d/Users/arno/Documents/dev/kriebeltuin/sites/all/themes/kriebeltuin_subtheme/templates/nodes/node--slideshow.tpl.php",
+		"/d/Users/arno/Documents/dev/kriebeltuin/sites/all/themes/kriebeltuin_subtheme/templates/nodes/node.tpl.php",
+		"/d/Users/arno/Documents/dev/kriebeltuin/sites/all/themes/kriebeltuin_subtheme/sass/_base.scss",
+		"/d/Users/arno/Documents/dev/kriebeltuin/sites/all/themes/kriebeltuin_subtheme/css/style.css",
+		"/d/Users/arno/Documents/dev/kriebeltuin/sites/all/themes/kriebeltuin_subtheme/templates/page.tpl.php",
+		"/d/Users/arno/Documents/dev/kriebeltuin/sites/default/settings.php",
+		"/d/Users/arno/Documents/dev/kriebeltuin/sftp-config.json",
+		"/D/Users/arno/Documents/dev/kriebeltuin/sftp-config.json",
+		"/d/Users/arno/Documents/dev/kriebeltuin/sites/all/themes/kriebeltuin_subtheme/templates/blocks/block--nodeblock--10.tpl.php",
+		"/d/Users/arno/Documents/dev/kriebeltuin/sites/all/themes/kriebeltuin_subtheme/templates/blocks/block--nodeblock--6.tpl.php",
+		"/d/Users/arno/Documents/dev/kriebeltuin/sites/all/themes/kriebeltuin_subtheme/templates/blocks/block--nodeblock--7.tpl.php",
+		"/d/Users/arno/Documents/dev/kriebeltuin/sites/all/themes/kriebeltuin_subtheme/templates/blocks/block--nodeblock--9.tpl.php",
+		"/d/Users/arno/Documents/dev/kriebeltuin/sites/all/themes/kriebeltuin_subtheme/kriebeltuin_subtheme.info",
+		"/d/Users/arno/Documents/dev/kriebeltuin/modules/node/tests/node_test_exception.info",
+		"/d/Users/arno/Documents/dev/kriebeltuin/modules/node/node.css",
+		"/D/Users/arno/Documents/dev/kriebeltuin/sites/all/themes/kriebeltuin_subtheme/js/jquery-1.11.1.min.js",
+		"/d/Users/arno/Documents/dev/kriebeltuin/modules/php/php.info",
+		"/d/Users/arno/Documents/dev/kriebeltuin/sites/all/themes/kriebeltuin_subtheme/.sass-cache/9f38a654fe7971982d704cad1dbb8e69a7d42f30/_inline-block.scssc",
+		"/d/Users/arno/Documents/dev/kriebeltuin/sites/all/themes/kriebeltuin_subtheme/.sass-cache/9f38a654fe7971982d704cad1dbb8e69a7d42f30/_images.scssc",
+		"/d/Users/arno/Documents/dev/kriebeltuin/.gitignore",
+		"/d/Users/arno/Documents/dev/kriebeltuin/includes/file.inc",
+		"/D/Users/arno/Documents/playground/loltimer/js/countdown.js",
+		"/d/Users/arno/Documents/dev/kriebeltuin/sites/all/themes/kriebeltuin_subtheme/template.php",
+		"/d/Users/arno/Desktop/test/index.html",
+		"/C/xampp/mysql/data/bbs/actions.ibd",
+		"/D/Users/arno/Documents/dev/kriebeltuin/sites/all/themes/kriebeltuin_subtheme/templates/nodes/node--main-feature.tpl.php",
+		"/d/Users/arno/Documents/dev/kriebeltuin/sites/all/themes/kriebeltuin_subtheme/templates/blocks/block--nodeblock--10.tpl.php ",
+		"/d/Users/arno/Documents/dev/kriebeltuin/sites/all/themes/kriebeltuin_subtheme/templates/blocks/block--info.tpl.php",
+		"/D/Users/arno/Documents/dev/kriebeltuin/sites/all/themes/kriebeltuin_subtheme/templates/blocks/block--info.tpl.php",
+		"/d/Users/arno/Documents/dev/kriebeltuin/sites/all/themes/kriebeltuin_subtheme/sass/_sprites.scss",
+		"/d/Users/arno/Documents/dev/kriebeltuin/modules/simpletest/tests/common_test_info.txt",
+		"/d/Users/arno/Documents/dev/kriebeltuin/sites/all/modules/libraries/tests/libraries/example_info_file.libraries.info",
+		"/d/Users/arno/Documents/dev/kriebeltuin/index.php",
+		"/d/Users/arno/Documents/dev/kriebeltuin/sites/all/themes/kriebeltuin_subtheme/templates/views/views-view-unformatted--featured-columns.tpl.php",
+		"/d/Users/arno/Documents/dev/kriebeltuin/sites/all/themes/kriebeltuin_subtheme/config.rb",
+		"/d/Users/arno/Desktop/hosts",
+		"/d/Users/arno/Documents/sublime-projects/Kriebeltuin.sublime-project",
+		"/D/Users/arno/Documents/sublime-projects/Arno Web Designs.sublime-project",
+		"/D/Users/arno/Documents/sublime-projects/hackathon.sublime-project",
+		"/D/Users/arno/Documents/sublime-projects/Klinker Loten.sublime-project",
+		"/D/Users/arno/Documents/sublime-projects/Victory Fitness.sublime-project",
+		"/d/Users/arno/Documents/playground/mongodb uni/hello_express/app.js",
+		"/d/Users/arno/Documents/playground/mongodb uni/hello_express/views/hello.html",
+		"/d/Users/arno/Documents/playground/loltimer/css/style.css",
+		"/D/Users/arno/Documents/playground/mongodb uni/helloworld.js",
+		"/D/Users/arno/Documents/playground/loltimer/sass/style.scss",
+		"/d/Users/arno/Documents/dev/arnowebdesigns/sftp-config.json",
+		"/d/Users/arno/Documents/playground/loltimer/index.html",
+		"/d/Users/arno/Documents/playground/mongodb uni/hello_express/hello.html",
+		"/d/Users/arno/Documents/playground/mongodb uni/npm-test.js",
+		"/D/Users/arno/Desktop/Adobe Photoshop CS5 Extended (Crack + Instructions)/hosts",
+		"/d/Users/arno/Documents/playground/mongodb uni/npm-test",
+		"/d/Users/arno/Documents/playground/mongodb uni/npm.js",
+		"/d/Users/arno/Documents/playground/loltimer/sass/_media-queries.scss",
+		"/D/Users/arno/Documents/playground/loltimer/sftp-config.json"
+	],
+	"find":
+	{
+		"height": 23.0
+	},
+	"find_in_files":
+	{
+		"height": 109.0,
+		"where_history":
+		[
+			"d:\\Users\\arno\\Documents\\dev\\kriebeltuin\\sites\\all\\themes\\kriebeltuin_subtheme",
+			"d:\\Users\\arno\\Documents\\dev\\kriebeltuin\\sites\\all\\themes\\kriebeltuin_subtheme\\templates",
+			"d:\\Users\\arno\\Documents\\dev\\kriebeltuin\\sites\\all\\themes\\kriebeltuin_subtheme\\templates\\blocks",
+			"D:\\Users\\arno\\Documents\\sublime-projects"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"styles",
+			"id=",
+			"id",
+			"overview",
+			"ng-click=\"showClient(klant.id",
+			"href=\"#\"",
+			"{klantId",
+			"ui-sref",
+			"klanten/",
+			"/",
+			"{{ klant",
+			"{{klant",
+			"{{",
+			"klanten/",
+			"klanten",
+			"<a ui-sref=\"klanten\">",
+			"href",
+			"=\"#/",
+			"#",
+			"<a href=\"#\">",
+			"<td>",
+			"td",
+			"<td>",
+			">",
+			"[DE]",
+			"1",
+			"emailService",
+			"checkbox",
+			"theme",
+			"nav",
+			".sidebar",
+			"nav",
+			"\n.sidebar .",
+			".sidebar ",
+			"sidebar",
+			"black",
+			"sidebar",
+			".sidebar",
+			"margin-top",
+			" margin-top:",
+			"sidebar",
+			"};",
+			"byte[][]",
+			"sidebar",
+			"margin-top: 50px;",
+			"navbar",
+			"border-bottom",
+			"eee",
+			"hover",
+			"nav",
+			"border",
+			"body",
+			"p",
+			"./",
+			"=",
+			"views",
+			"{{",
+			"emailId",
+			"urlRouteProvider",
+			"\"",
+			"partials",
+			"list",
+			"state1",
+			"email_id",
+			"sm-9 col-md-10",
+			"controller",
+			"AboutCtrl",
+			"\">\n",
+			"time",
+			"\n",
+			",",
+			"\n",
+			"\"",
+			"<a href=\"#\" class=\"list-group-",
+			"<a href=\"#\" class=\"list-group-item\">",
+			"a href=\"#\" class=\"list-group",
+			"position",
+			"margin",
+			"ng-model=\"todos\"",
+			" ui-sortable ng-model=\"todos\">\n    <p class=\"form-group\" ng-repeat",
+			" ui-sortable ng-model=\"todos\"",
+			"n class=\"btn btn-danger\" ng-click=\"removeTodo($index)\" aria-label=\"Remove\">X</butt",
+			"t-group-btn",
+			"ut type=\"text\" ng-model=\"todo\" class=\"form",
+			"=\"todo in todos\" style=\"padding:5px 10px; cursor: move;",
+			"v ui-sortable ng-model=\"todos\">",
+			"href",
+			"g-href=",
+			"ng-href=",
+			"'",
+			"\\httpdocs",
+			"laravel",
+			"3-col",
+			"<img src=\"<?php print base_path().$directory.\"/images/gear.png\" ?>\" alt=\"\">",
+			"h3",
+			"h2",
+			"\">",
+			"href",
+			"$node",
+			"id",
+			"<a class=\"node-edit\" href=\"/?q=node/<?php print $node->nid; ?>/edit\" title=\"Edit\"></a>",
+			"info",
+			"contactsection",
+			"photosection",
+			"infosection",
+			"contactsection",
+			"contact_formulier",
+			"url",
+			"h3",
+			"info",
+			"bord",
+			"top",
+			"colum",
+			"h3",
+			"<h1<?php print $title_attributes; ?>><?php print $title; ?></h1>",
+			"http",
+			"rel",
+			"border",
+			"h2",
+			"margin-",
+			"img",
+			"h2",
+			"height",
+			"1",
+			"7",
+			"40",
+			"input",
+			"#"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"Wijzigen",
+			"<a class=\"node-edit\" href=\"/?q=node/<?php print $node->nid; ?>/edit\" title=\"Edit\"><img src=\"<?php print base_path().$directory.\"/images/gear.png\" ?>\" alt=\"\"></a>",
+			"<h2<?php print $title_attributes; ?>><?php print $title; ?></h2>",
+			"users\\\\arno",
+			"users\\arno"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 3,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "app/app.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 287,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								245,
+								245
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content"
+							],
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "app/index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2432,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1793,
+								1793
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content"
+							],
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "README.md",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 10979,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								8828,
+								8828
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content"
+							],
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Markdown/Markdown.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 3505.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 10979,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								10979,
+								10979
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content"
+							],
+							"incomplete_sync": null,
+							"syntax": "Packages/Markdown/Markdown.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 3505.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "app/view2/view2.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 267,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								37,
+								37
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content"
+							],
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 39.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.sftp":
+	{
+		"height": 407.0
+	},
+	"project": "ict project website.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				".scss",
+				"app/styles/main.scss"
+			],
+			[
+				"main.scs",
+				"app/styles/main.scss"
+			],
+			[
+				"noe-sli",
+				"kriebeltuin_subtheme\\templates\\nodes\\node--slideshow.tpl.php"
+			],
+			[
+				"temp",
+				"kriebeltuin_subtheme\\template.php"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+			[
+				"",
+				"~/Documents/dev/ictprojectwebsite/website-ICTproject.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 355.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
