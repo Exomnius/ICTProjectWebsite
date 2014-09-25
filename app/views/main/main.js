@@ -9,6 +9,11 @@ angular.module('myApp.main', ['ngRoute'])
   });
 }])
 
-.controller('MainCtrl', [function() {
+.controller('MainCtrl', ['$scope', function($scope) {
+
+	$scope.pageHeading = "Welcome to landing page for team awesome";
+	$scope.pageSubtitle = "Now go fuck yourself.";
+
+
 
 }]);
