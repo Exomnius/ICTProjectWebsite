@@ -1,2 +1,36 @@
-<p>This is the partial for LEDEN.</p>
+<div class="container" id="leden">
+	<div class="page-header">
+		<h1>{{ 'NAV_VOORSTELLING' | translate }}
+			<div class="search-box input-group col-md-3 pull-right">
+				<input ng-model="searchText" type="text" class="search-query form-control" placeholder="{{ 'ZOEKEN' | translate }}" />
+				<span class="input-group-btn">
+					<button class="btn btn-default" type="button">
+						<span class=" glyphicon glyphicon-search">
+						</span>
+					</button>
+				</span>
+			</div>
+		</h1>
+	</div>
+	<div class="row">
+		<div class="lid-container col-md-6" ng-repeat="lid in leden | orderBy:'voornaam' | filter:searchText">
+			<div class="row lid">			
+				<div class="col-md-4">
+					<img src="{{ lid.foto }}" alt="">
+				</div>
+				<div class="col-md-8">
+					
+					<h2>
+						{{ lid.voornaam + " " + lid.naam }}
+					</h2>
+					<p>{{ 'RICHTING' | translate }}: <span class="block">{{ lid.richting | translate }}</span></p>
+					<p ng-show="lid.functie">{{ 'FUNCTIE' | translate }}: <span class="block">{{lid.functie | translate }}</span></p>
 
+					<a href="#">
+						<!-- <img class="cv" src="images/cv.png" alt=""> -->
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

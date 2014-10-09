@@ -1,0 +1,162 @@
+/* line 8, ../sass/style.scss */
+* {
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* line 16, ../sass/style.scss */
+.jumbotron {
+  background-color: #23293C;
+  padding: 130px 30px;
+  margin: 0;
+}
+/* line 21, ../sass/style.scss */
+.jumbotron h1 {
+  margin-top: 80px;
+}
+/* line 24, ../sass/style.scss */
+.jumbotron h1, .jumbotron p {
+  color: white;
+  font-weight: 300;
+}
+/* line 28, ../sass/style.scss */
+.jumbotron img {
+  width: 100%;
+}
+
+/* line 35, ../sass/style.scss */
+body {
+  padding-top: 50px;
+}
+
+/* line 39, ../sass/style.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 300;
+}
+
+/* line 43, ../sass/style.scss */
+.language {
+  float: left;
+  margin-right: 10px;
+  line-height: 20px;
+  cursor: pointer;
+  background-color: black;
+  padding: 15px;
+}
+/* line 51, ../sass/style.scss */
+.language span {
+  color: #777;
+  border-right: 1px solid #777;
+  padding: 0 5px;
+}
+/* line 56, ../sass/style.scss */
+.language span:hover {
+  color: white;
+}
+/* line 59, ../sass/style.scss */
+.language span:last-child {
+  border-right: none;
+}
+
+/* line 65, ../sass/style.scss */
+.project-description-container {
+  background-color: #B8CAFF;
+  padding-top: 50px;
+  padding-bottom: 80px;
+}
+/* line 70, ../sass/style.scss */
+.project-description-container h1 {
+  font-weight: 800;
+}
+
+/* line 77, ../sass/style.scss */
+.feature-container.highlighted {
+  background-color: #F7F7F7;
+  border-top: 1px solid #eaeaea;
+  border-bottom: 1px solid #eaeaea;
+}
+/* line 82, ../sass/style.scss */
+.feature-container .feature {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+/* line 88, ../sass/style.scss */
+footer p {
+  text-align: center;
+  margin-top: 10px;
+}
+
+/*****************************/
+/*****************************/
+/* Verslagen
+/*****************************/
+/*****************************/
+/* line 102, ../sass/style.scss */
+#verslagen ul {
+  list-style-type: none;
+}
+/* line 105, ../sass/style.scss */
+#verslagen ul li {
+  margin: 10px 0;
+  padding: 10px 0;
+  line-height: 25px;
+}
+/* line 109, ../sass/style.scss */
+#verslagen ul li:hover {
+  background-color: #F7F7F7;
+}
+/* line 112, ../sass/style.scss */
+#verslagen ul li a {
+  color: black;
+  text-decoration: none;
+}
+/* line 116, ../sass/style.scss */
+#verslagen ul li img {
+  margin-top: -3px;
+  margin-left: 5px;
+  height: 25px;
+}
+
+/*****************************/
+/*****************************/
+/* Leden
+/*****************************/
+/*****************************/
+/* line 134, ../sass/style.scss */
+#leden .lid-container {
+  min-height: 180px;
+  float: left;
+}
+/* line 138, ../sass/style.scss */
+#leden .lid-container .lid {
+  padding: 10px;
+  position: relative;
+}
+/* line 141, ../sass/style.scss */
+#leden .lid-container .lid h2 a {
+  text-decoration: none;
+  color: black;
+}
+/* line 153, ../sass/style.scss */
+#leden .lid-container .lid p {
+  margin-bottom: 15px;
+}
+/* line 157, ../sass/style.scss */
+#leden .lid-container .lid .block {
+  background-color: #EEEEEE;
+  padding: 5px 8px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  border: 1px solid #C4C4C4;
+  color: #262626;
+  font-size: 0.8em;
+  -moz-box-shadow: 1px 1px 1px 1px #e8e8e8;
+  -webkit-box-shadow: 1px 1px 1px 1px #e8e8e8;
+  box-shadow: 1px 1px 1px 1px #e8e8e8;
+}
+
+/* line 179, ../sass/style.scss */
+#leden .search-box, #verslagen .search-box {
+  margin-top: 6px;
+}

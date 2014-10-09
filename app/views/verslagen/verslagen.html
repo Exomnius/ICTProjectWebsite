@@ -1,1 +1,21 @@
-<p>This is the partial for VERSLAGEN.</p>
+<div class="container" id="verslagen">
+	 <div class="page-header">
+	  <h1>{{ 'NAV_VERSLAGEN' | translate }}
+			<div class="search-box input-group col-md-3 col-xs-6 pull-right">
+				<input ng-model="searchText" type="text" class="search-query form-control" placeholder="{{ 'ZOEKEN' | translate }}" />
+				<span class="input-group-btn">
+					<button class="btn btn-default" type="button">
+						<span class=" glyphicon glyphicon-search">
+						</span>
+					</button>
+				</span>
+			</div>
+		</h1>
+	</div>
+	<ul>
+		<li ng-repeat="verslag in verslagen | filter:searchText">
+		<a href="{{ verslag.file }}">
+		<img src="images/file.png" alt="">
+		{{ verslag.title }} - {{ verslag.date }}</a></li>
+	</ul>
+</div>

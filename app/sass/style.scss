@@ -1,11 +1,182 @@
-
-
-@import "base";
-
-@import "common/header";
-@import "common/footer";
-// @import "components/";
+$light-grey: #F7F7F7;
+$grey: #eaeaea;
+// $teal: #12D5CD;
+// $teal: #B8CAFF;
 
 @import "media-queries";
-@import "sprites";
 
+* {
+	font-family: 'Open Sans', sans-serif;
+}
+
+.navbar-brand {
+
+}
+
+.jumbotron {
+	background-color: #23293C;
+	padding: 130px 30px;
+	margin: 0;
+
+	h1 {
+		margin-top: 80px;
+	}
+	h1, p {
+		color: white;
+		font-weight: 300;
+	}
+	img {
+		width: 100%;
+	}
+}
+
+
+
+body {
+	padding-top: 50px;
+}
+
+h1, h2, h3,h4,h5,h6 {
+	font-weight: 300;
+}
+
+.language {
+	float: left;
+	margin-right: 10px;
+	// margin-top: 15px;
+	line-height: 20px;
+	cursor: pointer;
+	background-color: black;
+	padding: 15px;
+	span {
+		color: #777;
+		border-right: 1px solid #777;
+		padding: 0 5px;
+
+		&:hover {
+			color: white;
+		}
+		&:last-child {
+			border-right: none;
+		}
+	}
+}
+
+.project-description-container {
+	background-color: #B8CAFF;
+	padding-top: 50px;
+	padding-bottom: 80px;
+
+	h1 {
+		font-weight: 800;
+	}
+}
+
+.feature-container {
+
+	&.highlighted {
+		background-color: $light-grey;
+		border-top: 1px solid $grey;
+		border-bottom: 1px solid $grey;
+	}
+	.feature {
+		margin-top: 40px;
+		margin-bottom: 40px;
+	}
+}
+
+footer p {
+	text-align: center;
+	margin-top: 10px;
+}
+
+
+
+/*****************************/
+/*****************************/
+/* Verslagen
+/*****************************/
+/*****************************/
+
+#verslagen {
+	ul {
+		list-style-type: none;
+
+		li {
+			margin: 10px 0;
+			padding: 10px 0;
+			line-height: 25px;
+			&:hover {
+				background-color: $light-grey;
+			}
+			a {
+				color: black;
+				text-decoration: none;
+			}
+			img {
+				margin-top: -3px;
+				margin-left: 5px;
+				height: 25px;
+			}
+		}
+
+	}
+}
+
+/*****************************/
+/*****************************/
+/* Leden
+/*****************************/
+/*****************************/
+
+
+#leden {
+	.lid-container {
+		min-height: 180px;
+		float: left;
+
+		.lid {
+			h2 {
+				
+				a {
+					text-decoration: none;
+					color: black;
+				}
+			}
+			padding: 10px;
+			position: relative;
+			.cv {
+				// position: absolute;
+				// bottom: 30px;
+				// right: 50px;
+			}
+			p {
+				margin-bottom: 15px;				
+			}
+
+			.block {
+				background-color: #EEEEEE;
+				padding: 5px 8px;
+				-webkit-border-radius: 5px;
+				-moz-border-radius: 5px;
+				border-radius: 5px;
+				border: 1px solid #C4C4C4;
+				color: #262626;
+				font-size: 0.8em;
+
+				-moz-box-shadow:    1px 1px 1px 1px #e8e8e8;
+				-webkit-box-shadow: 1px 1px 1px 1px #e8e8e8;
+				box-shadow:         1px 1px 1px 1px #e8e8e8;
+			}
+		}
+	}
+
+}
+
+//	MISC
+
+#leden, #verslagen {
+	.search-box {
+		margin-top: 6px;
+	}
+}
