@@ -23,64 +23,55 @@
   width: 100%;
 }
 
-/* line 35, ../sass/style.scss */
-body {
-  padding-top: 50px;
-}
-
-/* line 39, ../sass/style.scss */
+/* line 33, ../sass/style.scss */
 h1, h2, h3, h4, h5, h6 {
   font-weight: 300;
 }
 
-/* line 43, ../sass/style.scss */
+/* line 37, ../sass/style.scss */
 .language {
-  float: left;
   margin-right: 10px;
-  line-height: 20px;
   cursor: pointer;
-  background-color: black;
-  padding: 15px;
 }
-/* line 51, ../sass/style.scss */
+/* line 40, ../sass/style.scss */
 .language span {
   color: #777;
   border-right: 1px solid #777;
   padding: 0 5px;
 }
-/* line 56, ../sass/style.scss */
+/* line 45, ../sass/style.scss */
 .language span:hover {
   color: white;
 }
-/* line 59, ../sass/style.scss */
+/* line 48, ../sass/style.scss */
 .language span:last-child {
   border-right: none;
 }
 
-/* line 65, ../sass/style.scss */
+/* line 54, ../sass/style.scss */
 .project-description-container {
   background-color: #B8CAFF;
   padding-top: 50px;
   padding-bottom: 80px;
 }
-/* line 70, ../sass/style.scss */
+/* line 59, ../sass/style.scss */
 .project-description-container h1 {
   font-weight: 800;
 }
 
-/* line 77, ../sass/style.scss */
+/* line 66, ../sass/style.scss */
 .feature-container.highlighted {
   background-color: #F7F7F7;
   border-top: 1px solid #eaeaea;
   border-bottom: 1px solid #eaeaea;
 }
-/* line 82, ../sass/style.scss */
+/* line 71, ../sass/style.scss */
 .feature-container .feature {
   margin-top: 40px;
   margin-bottom: 40px;
 }
 
-/* line 88, ../sass/style.scss */
+/* line 77, ../sass/style.scss */
 footer p {
   text-align: center;
   margin-top: 10px;
@@ -91,26 +82,26 @@ footer p {
 /* Verslagen
 /*****************************/
 /*****************************/
-/* line 102, ../sass/style.scss */
+/* line 91, ../sass/style.scss */
 #verslagen ul {
   list-style-type: none;
 }
-/* line 105, ../sass/style.scss */
+/* line 94, ../sass/style.scss */
 #verslagen ul li {
   margin: 10px 0;
   padding: 10px 0;
   line-height: 25px;
 }
-/* line 109, ../sass/style.scss */
+/* line 98, ../sass/style.scss */
 #verslagen ul li:hover {
   background-color: #F7F7F7;
 }
-/* line 112, ../sass/style.scss */
+/* line 101, ../sass/style.scss */
 #verslagen ul li a {
   color: black;
   text-decoration: none;
 }
-/* line 116, ../sass/style.scss */
+/* line 105, ../sass/style.scss */
 #verslagen ul li img {
   margin-top: -3px;
   margin-left: 5px;
@@ -122,26 +113,26 @@ footer p {
 /* Leden
 /*****************************/
 /*****************************/
-/* line 134, ../sass/style.scss */
+/* line 123, ../sass/style.scss */
 #leden .lid-container {
   min-height: 180px;
   float: left;
 }
-/* line 138, ../sass/style.scss */
+/* line 127, ../sass/style.scss */
 #leden .lid-container .lid {
   padding: 10px;
   position: relative;
 }
-/* line 141, ../sass/style.scss */
+/* line 130, ../sass/style.scss */
 #leden .lid-container .lid h2 a {
   text-decoration: none;
   color: black;
 }
-/* line 153, ../sass/style.scss */
+/* line 142, ../sass/style.scss */
 #leden .lid-container .lid p {
   margin-bottom: 15px;
 }
-/* line 157, ../sass/style.scss */
+/* line 146, ../sass/style.scss */
 #leden .lid-container .lid .block {
   background-color: #EEEEEE;
   padding: 5px 8px;
@@ -156,7 +147,29 @@ footer p {
   box-shadow: 1px 1px 1px 1px #e8e8e8;
 }
 
-/* line 179, ../sass/style.scss */
+/* line 168, ../sass/style.scss */
 #leden .search-box, #verslagen .search-box {
   margin-top: 6px;
+}
+
+/* line 174, ../sass/style.scss */
+.customNav {
+  background-color: black;
+  color: #777;
+  padding: 15px;
+  line-height: 20px;
+  font-weight: bold;
+}
+/* line 181, ../sass/style.scss */
+.customNav a {
+  color: #777;
+}
+/* line 184, ../sass/style.scss */
+.customNav a:hover {
+  color: white;
+  text-decoration: none;
+}
+/* line 190, ../sass/style.scss */
+.customNav .brand > a {
+  text-transform: uppercase;
 }
