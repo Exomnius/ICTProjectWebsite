@@ -1,0 +1,171 @@
+/* line 7, ../sass/styles.scss */
+body {
+  background: url("../images/wood_pattern.png");
+}
+
+/* line 12, ../sass/styles.scss */
+p, a, span, li {
+  color: #333333;
+  font-weight: 200;
+  font-size: 14px;
+  line-height: 24px;
+  padding: 0;
+}
+
+/* line 20, ../sass/styles.scss */
+* {
+  font-family: 'Lato';
+}
+
+/* line 24, ../sass/styles.scss */
+.notice {
+  color: #333333;
+}
+
+/* line 28, ../sass/styles.scss */
+#profile-wrapper {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+/* line 32, ../sass/styles.scss */
+#profile-wrapper.affix {
+  position: fixed;
+  top: 0px;
+}
+/* line 37, ../sass/styles.scss */
+#profile-wrapper .profile-card {
+  background-color: white;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  padding: 20px;
+}
+/* line 44, ../sass/styles.scss */
+#profile-wrapper .profile-card hr {
+  width: 80%;
+  display: block;
+  margin: 20px auto;
+}
+/* line 50, ../sass/styles.scss */
+#profile-wrapper .profile-card img {
+  display: block;
+  margin: 0 auto;
+}
+/* line 55, ../sass/styles.scss */
+#profile-wrapper .profile-card .name {
+  text-align: center;
+  color: #333333;
+}
+/* line 60, ../sass/styles.scss */
+#profile-wrapper .profile-card .detail {
+  margin-bottom: 10px;
+}
+/* line 64, ../sass/styles.scss */
+#profile-wrapper .profile-card .detail .icon {
+  color: #707070;
+  font-size: 14px;
+  margin: 15px;
+}
+/* line 70, ../sass/styles.scss */
+#profile-wrapper .profile-card .detail .info {
+  color: #333333;
+  font-size: 12px;
+  line-height: 16px;
+}
+/* line 76, ../sass/styles.scss */
+#profile-wrapper .profile-card .social-links {
+  text-align: center;
+}
+/* line 78, ../sass/styles.scss */
+#profile-wrapper .profile-card .social-links a {
+  color: #707070;
+  text-decoration: none;
+}
+/* line 83, ../sass/styles.scss */
+#profile-wrapper .profile-card .social-links a:hover {
+  color: #333333;
+}
+
+/* line 93, ../sass/styles.scss */
+#cv-wrapper #cv {
+  background-color: white;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  padding: 20px 20px 20px 40px;
+}
+/* line 100, ../sass/styles.scss */
+#cv-wrapper #cv .icon {
+  float: left;
+  font-size: 14px;
+  margin-right: 15px;
+  color: #707070;
+}
+/* line 107, ../sass/styles.scss */
+#cv-wrapper #cv .title {
+  color: #707070;
+  text-transform: uppercase;
+  font-weight: 500;
+  line-height: 1.1;
+  font-size: 18px;
+  display: block;
+  padding-bottom: 10px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #F0F0F0;
+}
+/* line 120, ../sass/styles.scss */
+#cv-wrapper #cv p.content {
+  margin-left: 28px;
+}
+/* line 125, ../sass/styles.scss */
+#cv-wrapper #cv > article .card {
+  list-style-type: none;
+  margin-bottom: 20px;
+}
+/* line 130, ../sass/styles.scss */
+#cv-wrapper #cv > article .card .card-title {
+  padding-left: 10px;
+}
+/* line 133, ../sass/styles.scss */
+#cv-wrapper #cv > article .card .content {
+  padding-left: 40px;
+}
+/* line 136, ../sass/styles.scss */
+#cv-wrapper #cv > article .card .key-points {
+  padding-left: 20px;
+}
+/* line 142, ../sass/styles.scss */
+#cv-wrapper #cv > article .labels .label {
+  font-size: 12px;
+  font-weight: 300;
+  background-color: #353535;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  color: white;
+  padding: 4px 7px;
+  margin-right: 2px;
+  margin-bottom: 4px;
+  display: inline-block;
+}
+/* line 159, ../sass/styles.scss */
+#cv-wrapper hr {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 0;
+  border-top: 1px solid #eee;
+}
+
+@media (max-width: 992px) {
+  /* line 12, ../sass/_media-queries.scss */
+  #profile-wrapper.affix {
+    position: relative;
+  }
+}
+@media (min-width: 992px) {
+  /* line 21, ../sass/_media-queries.scss */
+  #cv-wrapper {
+    margin-top: 10px;
+  }
+}

@@ -104,6 +104,7 @@ myApp.config(['$translateProvider', function ($translateProvider) {
 		FUNCTIE_SECRETARIS: 'Secretaris',
 		FUNCTIE_EPOS_BB: 'Epos/BB verantwoordelijke',
 		ZOEKEN: 'Zoeken',
+		FUNCTIE_TEMP: 'Is in Special Topics team',
 	}
 
 	general['en'] = {
@@ -124,6 +125,7 @@ myApp.config(['$translateProvider', function ($translateProvider) {
 		FUNCTIE_SECRETARIS: 'Secretary',
 		FUNCTIE_EPOS_BB: 'Epos / BB controller',
 		ZOEKEN: 'Search',
+		FUNCTIE_TEMP: 'Is in Special Topics team',
 	}
 
 	general['fr'] = {
@@ -144,6 +146,7 @@ myApp.config(['$translateProvider', function ($translateProvider) {
 		FUNCTIE_SECRETARIS: 'Secrétaire ',
 		FUNCTIE_EPOS_BB: 'Contrôleur de Epos / BB ',
 		ZOEKEN: 'Recherche',
+		FUNCTIE_TEMP: 'Is in Special Topics team',
 	}
 
 	$translateProvider.translations('en', general['en']);

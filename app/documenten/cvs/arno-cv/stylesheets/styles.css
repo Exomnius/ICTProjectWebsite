@@ -1,0 +1,70 @@
+/* Welcome to Compass. Use this file to write IE specific override styles.
+ * Import this file using the following HTML or equivalent:
+ * <!--[if IE]>
+ *   <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+ * <![endif]--> */
+/* line 7, ../sass/styles.scss */
+body {
+  background-color: #F0F0F0;
+}
+
+/* line 11, ../sass/styles.scss */
+* {
+  font-family: 'Lato';
+}
+
+/* line 16, ../sass/styles.scss */
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+/* line 21, ../sass/styles.scss */
+.pull-left {
+  float: left;
+}
+
+/* line 25, ../sass/styles.scss */
+.pull-right {
+  float: right;
+}
+
+/* line 29, ../sass/styles.scss */
+#profile-wrapper {
+  width: 20%;
+  float: left;
+  background-color: white;
+  margin-right: 1%;
+  border: 1px solid #d6d6d6;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+/* line 39, ../sass/styles.scss */
+#profile-wrapper .profile-card {
+  padding: 20px;
+}
+
+/* line 44, ../sass/styles.scss */
+#content-wrapper {
+  width: 78%;
+  float: right;
+  background-color: white;
+  border: 1px solid #d6d6d6;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+/* line 53, ../sass/styles.scss */
+#content-wrapper .content {
+  padding: 20px;
+  color: red !important;
+}
+
+/* line 62, ../sass/styles.scss */
+hr {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 0;
+  border-top: 1px solid #eee;
+}

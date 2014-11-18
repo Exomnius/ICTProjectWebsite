@@ -1,0 +1,28 @@
+// .col-xs-
+@media(max-width:767px){
+}
+
+// .col-sm-
+@media(min-width:768px){
+}
+
+
+// .col-md-
+@media(max-width:992px){
+ 	#profile-wrapper.affix{
+		// disable affix
+		position: relative;
+	}
+}
+
+// .col-md-
+@media(min-width:992px){
+
+	#cv-wrapper {
+		margin-top: 10px;
+	}
+}
+// .col-lg-
+@media(min-width:1200px){
+
+}

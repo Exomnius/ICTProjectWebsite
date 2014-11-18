@@ -1,0 +1,99 @@
+/* 
+    Created on : Oct 7, 2014, 19:26:21 AM
+    Author     : Nick
+*/
+body{
+    background-image: url("../images/background-texture.jpg")
+}
+
+.content{
+    background-color: white;
+    margin-bottom: 1%;
+    padding-bottom: 2%;
+}
+
+.content h1{
+    margin-top: 0px;
+}
+.about p{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.navbar .navbar-nav {
+    display: inline-block;
+}
+.navbar .navbar-header{
+    background-color: white;
+}
+.navbar .navbar-collapse {
+    text-align: center;
+    background-color: white;
+}
+
+.navbar{
+    margin-bottom: 5px;
+}
+
+.name{
+    font-weight: bolder;
+    font-size: larger;
+}
+
+.page-header{
+    border-bottom-color: #d8d8d8;
+    margin-top: -10px;
+}
+
+.header{
+    border-bottom: 3px solid #23313c;
+    color: black;
+    margin-bottom: 20px;
+}
+
+.header .title{
+    font-size: xx-large;
+    padding: 5px;
+}
+
+footer{
+    margin-right: 10px;
+}
+
+.form-group{
+    text-align: left;
+}
+
+textarea{
+    resize: none;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+.progress{
+    width: 120px;
+}
+
+.title{
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+@media screen and (max-width: 995px){
+    .form-horizontal .form-group{
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+    .row{
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+}
+
+@media screen and (max-width: 995px){
+    .title{
+        margin-left: -5px;
+    }
+}

@@ -20,31 +20,31 @@ angular.module('myApp.leden', ['ngRoute'])
 		voornaam: 'Arno',
 		richting: 'RICHTING_AON',
 		foto: 'arno.jpg',
-		cv: 'waeyenberg.txt',
-		functie: null
+		cvUrl: 'arno-cv/index.html',
+		functie: false
 	},
 	{
 		naam: 'Bloemen',
 		voornaam: 'Martijn',
 		richting: 'RICHTING_SWM',
 		foto: 'martijn.jpg',
-		cv: null,
-		functie: null
+		cvUrl: false,
+		functie: false
 	},
 	{
 		naam: 'Decuypere',
 		voornaam: 'Bram',
 		richting: 'RICHTING_AON',
 		foto: 'bram.jpg',
-		cv: 'decuypere.txt',
-		functie: null
+		cvUrl: false,
+		functie: false
 	},
 	{
 		naam: 'Janssen',
 		voornaam: 'Cornel',
 		richting: 'RICHTING_AON',
 		foto: 'cornel.jpg',
-		cv: 'janssen.txt',
+		cvUrl: 'cornel-cv/index.html',
 		functie: 'FUNCTIE_CO_LEIDER'
 	},
 	{
@@ -52,15 +52,15 @@ angular.module('myApp.leden', ['ngRoute'])
 		voornaam: 'Sevak',
 		richting: 'RICHTING_SWM',
 		foto: 'sevak.jpg',
-		cv: null,
-		functie: null
+		cvUrl: false,
+		functie: false
 	},
 	{
 		naam: 'Thoelen',
 		voornaam: 'Nick',
 		richting: 'RICHTING_AON',
 		foto: 'nick.jpg',
-		cv: 'thoelen.txt',
+		cvUrl: 'nick-cv/index.html',
 		functie: 'FUNCTIE_EPOS_BB'
 	},
 	{
@@ -68,7 +68,7 @@ angular.module('myApp.leden', ['ngRoute'])
 		voornaam: 'Mathias',
 		richting: 'RICHTING_SNB',
 		foto: 'mathias.jpg',
-		cv: null,
+		cvUrl: false,
 		functie: 'FUNCTIE_SECRETARIS'
 	},
 	{
@@ -76,8 +76,16 @@ angular.module('myApp.leden', ['ngRoute'])
 		voornaam: 'Tim',
 		richting: 'RICHTING_SNB',
 		foto: 'tim.jpg',
-		cv: null,
+		cvUrl: false,
 		functie: 'FUNCTIE_LEIDER'
+	},
+	{
+		naam: 'Neyens',
+		voornaam: 'Peter',
+		richting: 'RICHTING_AON',
+		foto: 'peter.jpg',
+		cvUrl: false,
+		functie: 'FUNCTIE_TEMP'
 	}
 	];
 

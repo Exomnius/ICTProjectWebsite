@@ -1,0 +1,173 @@
+
+$heading-color: #707070;
+$paragraph-color: #333333;
+
+$grey: #F0F0F0;
+
+body {
+	// background: url('../images/dark_wood.png');
+	background: url('../images/wood_pattern.png');
+}
+
+p, a, span, li {
+	color: $paragraph-color;
+	font-weight: 200;
+	font-size: 14px;
+	line-height: 24px;
+	padding: 0;
+}
+
+* {
+	font-family: 'Lato';
+}
+
+.notice {
+	color: $paragraph-color;
+}
+
+#profile-wrapper {
+	margin-top: 10px;
+	margin-bottom: 10px;
+
+	&.affix {
+		position: fixed;
+		top: 0px;
+	}
+
+	.profile-card {
+		background-color: white;
+		-webkit-border-radius: 3px;
+		-moz-border-radius: 3px;
+		border-radius: 3px;
+		padding: 20px;
+		
+		hr {
+			width: 80%;
+			display: block;
+			margin: 20px auto;
+		}
+
+		img {
+			display: block;
+			margin: 0 auto;
+		}
+
+		.name {
+			text-align: center;
+			color: $paragraph-color;
+		}
+
+		.detail {
+			margin-bottom: 10px;
+
+
+			.icon {
+				color: $heading-color;
+				font-size: 14px;
+				margin: 15px;
+			}
+
+			.info {
+				color: $paragraph-color;
+				font-size: 12px;
+				line-height: 16px;
+			}
+		}
+		.social-links {
+			text-align: center;
+			a {
+				color: $heading-color;
+				text-decoration: none;
+				// margin-bottom: 10px;
+			}
+			a:hover {
+				color: $paragraph-color;
+			}
+		}
+	}
+}
+
+
+#cv-wrapper {
+
+	#cv {
+		background-color: white;
+		-webkit-border-radius: 3px;
+		-moz-border-radius: 3px;
+		border-radius: 3px;
+		padding: 20px 20px 20px 40px;
+		
+		.icon {
+			float: left;
+			font-size: 14px;
+			margin-right: 15px;
+			color: $heading-color;
+		}
+
+		.title {
+			color: $heading-color;
+			text-transform: uppercase;
+			font-weight: 500;
+			line-height: 1.1;
+			font-size: 18px;
+			display: block;
+			padding-bottom: 10px;
+			margin-top: 30px;
+			margin-bottom: 10px;
+			border-bottom: 1px solid $grey;
+		}
+
+		p.content {
+			margin-left: 28px;
+		}
+
+		& > article {
+			.card {
+				list-style-type: none;
+				margin-bottom: 20px;
+
+
+				.card-title {
+					padding-left: 10px;
+				}
+				.content {
+					padding-left: 40px;
+				}
+				.key-points {
+					padding-left: 20px;
+				}
+			}
+
+			.labels {
+				.label {
+					font-size: 12px;
+					font-weight: 300;
+					background-color: #353535;
+					-webkit-border-radius: 3px;
+					-moz-border-radius: 3px;
+					border-radius: 3px;
+					color: white;
+					padding: 4px 7px;
+					margin-right: 2px;
+					margin-bottom: 4px;
+					display: inline-block;
+				}
+			}
+		}
+	}
+
+	hr {
+		margin-top: 20px;
+		margin-bottom: 20px;
+		border: 0;
+		border-top: 1px solid #eee;
+	}
+}
+
+
+
+
+
+
+
+@import 'media-queries';

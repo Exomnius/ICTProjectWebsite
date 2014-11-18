@@ -16,7 +16,7 @@
 		<div class="lid-container col-md-6" ng-repeat="lid in leden | orderBy:'voornaam' | filter:searchText">
 			<div class="row lid">			
 				<div class="col-md-4">
-					<img src="{{ lid.foto }}" alt="">
+					<img width="160px" src="{{ lid.foto }}" alt="">
 				</div>
 				<div class="col-md-8">
 					
@@ -26,8 +26,8 @@
 					<p>{{ 'RICHTING' | translate }}: <span class="block">{{ lid.richting | translate }}</span></p>
 					<p ng-show="lid.functie">{{ 'FUNCTIE' | translate }}: <span class="block">{{lid.functie | translate }}</span></p>
 
-					<a href="#">
-						<!-- <img class="cv" src="images/cv.png" alt=""> -->
+					<a href="documenten/cvs/{{ lid.cvUrl }}" ng-show="lid.cvUrl">
+						<img class="cv" src="images/cv.png" alt="" height="27px">
 					</a>
 				</div>
 			</div>

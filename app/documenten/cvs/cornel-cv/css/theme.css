@@ -1,0 +1,41 @@
+/* 
+    Created on : Sep 21, 2014, 8:42:41 AM
+    Author     : Cornel
+*/
+
+.navbar .navbar-nav {
+    display: inline-block;
+    float: none;
+}
+
+.navbar .navbar-collapse {
+    text-align: center;
+}
+
+.name{
+    font-weight: bolder;
+    font-size: larger;
+}
+
+.description{
+    padding: 50px;
+}
+
+footer{
+    padding-right: 10px;
+}
+
+.page-header{
+    border-bottom-color: #d8d8d8;
+}
+
+.text-label{
+    display: inline-block;
+    max-width: 100%;
+    font-weight: 700;
+    text-align: right;
+}
+
+main{
+    display: none;
+}
