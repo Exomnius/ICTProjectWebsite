@@ -84,7 +84,7 @@ angular.module('myApp.leden', ['ngRoute'])
 		voornaam: 'Peter',
 		richting: 'RICHTING_AON',
 		foto: 'peter.jpg',
-		cvUrl: false,
+		cvUrl: 'peter-cv/cv.html',
 		functie: 'FUNCTIE_TEMP'
 	}
 	];
