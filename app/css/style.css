@@ -163,13 +163,14 @@ footer p {
 /* line 181, ../sass/style.scss */
 .customNav a {
   color: #777;
+  display: inline-block;
 }
-/* line 184, ../sass/style.scss */
+/* line 185, ../sass/style.scss */
 .customNav a:hover {
   color: white;
   text-decoration: none;
 }
-/* line 190, ../sass/style.scss */
+/* line 191, ../sass/style.scss */
 .customNav .brand > a {
   text-transform: uppercase;
 }
