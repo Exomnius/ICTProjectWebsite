@@ -9,7 +9,7 @@ angular.module('myApp.verslagen', ['ngRoute'])
 		});
 	}])
 
-	.controller('VerslagenCtrl', ['$scope', function($scope) {
+	.controller('VerslagenCtrl', ['$scope', '$rootScope', '$location', function($scope, $rootScope, $location) {
 
 		var folderPath = 'documenten/verslagen/';
 		var verslagen = [
@@ -45,10 +45,17 @@ angular.module('myApp.verslagen', ['ngRoute'])
 			}
 		];
 
+		if(!$rootScope.isLoggedIn) {
+			$location.path("/login");
+		}
+
 		$scope.verslagen = verslagen.map(function(verslag){
 			verslag.file = folderPath + verslag.file;
 			return verslag;
 		});
+
+
+
 
 
 	}]);

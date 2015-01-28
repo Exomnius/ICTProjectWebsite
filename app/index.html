@@ -18,7 +18,7 @@
     <body>  
         <div ng-controller="navCtrl" class="row customNav">
             <div class="col-lg-2 col-md-4 col-sm-12 brand text-center">
-                <a href="#">{{ 'SITE_TITLE' | translate }}</a>
+                <a href="#/">{{ 'SITE_TITLE' | translate }}</a>
             </div>
             <div ng-class="{active: isActive('/')}" class="col-lg-2 col-md-4 col-sm-12 text-center">
                 <a href="#/">{{ 'NAV_PROJECT' | translate }}</a>
@@ -35,6 +35,10 @@
                     <span ng-click="changeLanguage('en')">EN</span>
                     <span ng-click="changeLanguage('fr')">FR</span>
                 </span>
+            </div>
+            <div class="col-lg-2 col-md-4 col-sm-12 text-center">
+                <a href="#/login" ng-hide="isLoggedIn" >{{ 'NAV_LOGIN' | translate }}</a>
+                <a href="#/login" ng-click="logout()" ng-show="isLoggedIn" >{{ 'NAV_LOGOUT' | translate }}</a>
             </div>
         </div>
 
@@ -67,7 +71,7 @@
 
         <div ng-view></div>
 
-        <footer>
+        <footer class="col-sm-12">
             <p>&copy; {{ 'SITE_TITLE' | translate }} {{ currentYear}}</p>
         </footer>
         <!-- In production use:
@@ -82,5 +86,6 @@
         <script src="views/main/main.js"></script>
         <script src="views/leden/leden.js"></script>
         <script src="views/verslagen/verslagen.js"></script>
+        <script src="views/login/login.js"></script>
     </body>
 </html>

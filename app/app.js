@@ -6,6 +6,7 @@ var myApp = angular.module('myApp', [
 	'myApp.main',
 	'myApp.leden',
 	'myApp.verslagen',
+	'myApp.login',
 	'pascalprecht.translate'
 	]);
 
@@ -16,11 +17,13 @@ myApp.config(['$routeProvider', function($routeProvider) {
 
 }]);
 
-myApp.controller('navCtrl', ['$scope', '$location', '$translate', function($scope, $location, $translate) {
+myApp.controller('navCtrl', ['$scope', '$location', '$translate','$rootScope', function($scope, $location, $translate, $rootScope) {
 	
 	$scope.changeLanguage = function (langKey) {
 		$translate.use(langKey);
 	};
+
+	$rootScope.isLoggedIn = false;
 
 	$scope.isActive = function(path) {
 		if ($location.path().length == path.length && $location.path().substr(0, path.length) == path) {
@@ -28,6 +31,10 @@ myApp.controller('navCtrl', ['$scope', '$location', '$translate', function($scop
 		} else {
 			return false;
 		}
+	}
+
+	$scope.logout = function() {
+		$rootScope.isLoggedIn = false;
 	}
 
 }]);
@@ -90,6 +97,8 @@ myApp.config(['$translateProvider', function ($translateProvider) {
 		NAV_PROJECT: 'Project',
 		NAV_VERSLAGEN: 'Verslagen',
 		NAV_VOORSTELLING: 'Voorstelling van leden',
+		NAV_LOGIN: 'Log In',
+		NAV_LOGOUT: 'Log Uit',
 		SITE_TITLE: 'Future family medicine',
 		SITE_SUBTITLE: 'De applicatie voor de moderne huisarts.',
 		SITE_DESC_TITLE: 'Project omschrijving',
@@ -111,6 +120,8 @@ myApp.config(['$translateProvider', function ($translateProvider) {
 		NAV_PROJECT: 'Project',
 		NAV_VERSLAGEN: 'Reports',
 		NAV_VOORSTELLING: 'Presentation of members',
+		NAV_LOGIN: 'Sign In',
+		NAV_LOGOUT: 'Sign Out',
 		SITE_TITLE: 'Future family medicine',
 		SITE_SUBTITLE: 'The application for the modern practitioner.',
 		SITE_DESC_TITLE: 'Project Description',
@@ -132,6 +143,8 @@ myApp.config(['$translateProvider', function ($translateProvider) {
 		NAV_PROJECT: 'Projet ',
 		NAV_VERSLAGEN: 'Rapports ',
 		NAV_VOORSTELLING: 'Présentation des membres ',
+		NAV_LOGIN: 'Connexion',
+		NAV_LOGOUT: 'Déconnexion',
 		SITE_TITLE: 'Future family medicine',
 		SITE_SUBTITLE: 'L\'application pour le praticien moderne. ',
 		SITE_DESC_TITLE: 'Description du projet ',
